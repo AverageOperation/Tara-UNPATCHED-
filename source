@@ -1,0 +1,54 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+TextButton.Position = UDim2.new(0.247720361, 0, 0.417457312, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 125)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "CRASH DA HOOD!"
+TextButton.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+-- Scripts:
+
+local function ZWOYXQU_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local sound = Instance.new("Sound")
+	
+		sound.Name = "Sound"
+		sound.SoundId = "http://www.roblox.com/asset/?id=5350465548"
+		sound.Volume = 1
+		sound.Pitch = 1
+		sound.Looped = false
+		sound.archivable = false
+	
+		sound.Parent = game.Workspace
+	
+		wait()
+	
+		sound:play()
+	end)
+end
+coroutine.wrap(ZWOYXQU_fake_script)()
+local function XPLOX_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 900
+	end)
+end
+coroutine.wrap(XPLOX_fake_script)() 
